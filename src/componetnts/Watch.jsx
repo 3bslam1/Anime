@@ -3,14 +3,14 @@ import { useMemo, useState } from "react";
 import { Search, Star, BookmarkPlus, X, Filter, ChevronDown, Play } from "lucide-react";
 
 const MOCK_SHOWS = [
-  { id: "aot", title: "Attack on Titan", cover: "aot.jpeg", rating: 4.8, genres: ["Action","Dark","Seinen"], seasons: 4, episodes: 87, updated: "1d",  progressEp: 34, desc: "Humanity fights for survival against towering titans and hidden conspiracies." },
-  { id: "onepiece", title: "One Piece", cover: "onepiece.jpeg", rating: 4.9, genres: ["Adventure","Fantasy","Shonen"], seasons: 20, episodes: 1100, updated: "today", progressEp: 402, desc: "Straw Hat pirates chase the ultimate treasure across a vast and magical world." },
-  { id: "jujutsu", title: "Jujutsu Kaisen", cover: "jk.jpeg", rating: 4.8, genres: ["Action","Supernatural","Shonen"], seasons: 2, episodes: 47, updated: "2d", progressEp: 21, desc: "Curses, sorcerers, and battles of domain expansion in a deadly modern world." },
-  { id: "bluelock", title: "Blue Lock", cover: "bluelock.jpeg", rating: 4.6, genres: ["Sports","Shonen"], seasons: 2, episodes: 36, updated: "3d", progressEp: 12, desc: "Elite strikers are forged in a ruthless program to create Japan’s No.1." },
-  { id: "demon_slayer", title: "Demon Slayer", cover: "deamonslayer.jpeg", rating: 4.6, genres: ["Action","Fantasy","Shonen"], seasons: 4, episodes: 55, updated: "1w", progressEp: 18, desc: "Siblings fight demons with breath styles and fierce resolve." },
-  { id: "chainsawman", title: "Chainsaw Man", cover: "cm.jpeg", rating: 4.7, genres: ["Action","Dark","Shonen"], seasons: 1, episodes: 12, updated: "1y", progressEp: 7, desc: "A devil hunter merges with Chainsaw devil to chase a chaotic ‘normal’ life." },
-  { id: "haikyuu", title: "Haikyuu!!", cover: "haikuu.jpeg", rating: 4.8, genres: ["Sports","Shonen"], seasons: 4, episodes: 85, updated: "2y", progressEp: 44, desc: "Volleyball passion, teamwork, and fast growth towards the national stage." },
-  { id: "spy_family", title: "Spy x Family", cover: "spy.jpeg", rating: 4.4, genres: ["Comedy","Slice of Life"], seasons: 2, episodes: 37, updated: "6d", progressEp: 9, desc: "A spy, an assassin, and a telepath play family for peace and hilarious chaos." },
+  { id: "aot", title: "Attack on Titan", cover: "/aot.jpeg", rating: 4.8, genres: ["Action","Dark","Seinen"], seasons: 4, episodes: 87, updated: "1d",  progressEp: 34, desc: "Humanity fights for survival against towering titans and hidden conspiracies." },
+  { id: "onepiece", title: "One Piece", cover: "/onepiece.jpeg", rating: 4.9, genres: ["Adventure","Fantasy","Shonen"], seasons: 20, episodes: 1100, updated: "today", progressEp: 402, desc: "Straw Hat pirates chase the ultimate treasure across a vast and magical world." },
+  { id: "jujutsu", title: "Jujutsu Kaisen", cover: "/jk.jpeg", rating: 4.8, genres: ["Action","Supernatural","Shonen"], seasons: 2, episodes: 47, updated: "2d", progressEp: 21, desc: "Curses, sorcerers, and battles of domain expansion in a deadly modern world." },
+  { id: "bluelock", title: "Blue Lock", cover: "/bluelock.jpeg", rating: 4.6, genres: ["Sports","Shonen"], seasons: 2, episodes: 36, updated: "3d", progressEp: 12, desc: "Elite strikers are forged in a ruthless program to create Japan’s No.1." },
+  { id: "demon_slayer", title: "Demon Slayer", cover: "/deamonslayer.jpeg", rating: 4.6, genres: ["Action","Fantasy","Shonen"], seasons: 4, episodes: 55, updated: "1w", progressEp: 18, desc: "Siblings fight demons with breath styles and fierce resolve." },
+  { id: "chainsawman", title: "Chainsaw Man", cover: "/cm.jpeg", rating: 4.7, genres: ["Action","Dark","Shonen"], seasons: 1, episodes: 12, updated: "1y", progressEp: 7, desc: "A devil hunter merges with Chainsaw devil to chase a chaotic ‘normal’ life." },
+  { id: "haikyuu", title: "Haikyuu!!", cover: "/haikuu.jpeg", rating: 4.8, genres: ["Sports","Shonen"], seasons: 4, episodes: 85, updated: "2y", progressEp: 44, desc: "Volleyball passion, teamwork, and fast growth towards the national stage." },
+  { id: "spy_family", title: "Spy x Family", cover: "/spy.jpeg", rating: 4.4, genres: ["Comedy","Slice of Life"], seasons: 2, episodes: 37, updated: "6d", progressEp: 9, desc: "A spy, an assassin, and a telepath play family for peace and hilarious chaos." },
 ];
 
 const ALL_GENRES = ["Action","Adventure","Fantasy","Shonen","Seinen","Sports","Romance","Comedy","Supernatural","Dark","Slice of Life"];

@@ -6,7 +6,7 @@ const MOCK_MANGA = [
   {
     id: "bluelock",
     title: "Blue Lock",
-    cover: "bluelock.jpeg", // غيّر المسار لصورك
+    cover: "/bluelock.jpeg", // غيّر المسار لصورك
     rating: 4.6,
     genres: ["Sports", "Shonen"],
     chapters: 250,
@@ -17,7 +17,7 @@ const MOCK_MANGA = [
   {
     id: "jujutsu",
     title: "Jujutsu Kaisen",
-    cover: "jk.jpeg",
+    cover: "/jk.jpeg",
     rating: 4.8,
     genres: ["Action", "Supernatural", "Shonen"],
     chapters: 280,
@@ -28,7 +28,7 @@ const MOCK_MANGA = [
   {
     id: "berserk",
     title: "Berserk",
-    cover: "berserk.jpeg",
+    cover: "/berserk.jpeg",
     rating: 4.9,
     genres: ["Dark", "Seinen", "Fantasy"],
     chapters: 374,
@@ -39,7 +39,7 @@ const MOCK_MANGA = [
   {
     id: "naruto",
     title: "Naruto Shippuden",
-    cover: "ns.jpeg",
+    cover: "/ns.jpeg",
     rating: 4.7,
     genres: ["Action", "Adventure", "Shonen"],
     chapters: 700,
@@ -50,7 +50,7 @@ const MOCK_MANGA = [
   {
     id: "onepiece",
     title: "One Piece",
-    cover: "onepiece.jpeg",
+    cover: "/onepiece.jpeg",
     rating: 4.9,
     genres: ["Adventure", "Fantasy", "Shonen"],
     chapters: 1100,
@@ -61,7 +61,7 @@ const MOCK_MANGA = [
   {
     id: "aot",
     title: "Attack on Titan",
-    cover: "aot.jpeg",
+    cover: "/aot.jpeg",
     rating: 4.8,
     genres: ["Dark", "Action", "Seinen"],
     chapters: 139,
@@ -72,7 +72,7 @@ const MOCK_MANGA = [
   {
     id: "tokyoghoul",
     title: "Tokyo Ghoul",
-    cover: "tokyoghoul.jpeg",
+    cover: "/tokyoghoul.jpeg",
     rating: 4.5,
     genres: ["Dark", "Seinen", "Horror"],
     chapters: 180,
@@ -83,7 +83,7 @@ const MOCK_MANGA = [
   {
     id: "chainsawman",
     title: "Chainsaw Man",
-    cover: "cm.jpeg",
+    cover: "/cm.jpeg",
     rating: 4.7,
     genres: ["Action", "Dark", "Shonen"],
     chapters: 150,
@@ -94,7 +94,7 @@ const MOCK_MANGA = [
   {
     id: "demon_slayer",
     title: "Demon Slayer",
-    cover: "deamonslayer.jpeg",
+    cover: "/deamonslayer.jpeg",
     rating: 4.6,
     genres: ["Action", "Fantasy", "Shonen"],
     chapters: 205,
@@ -105,7 +105,7 @@ const MOCK_MANGA = [
   {
     id: "solo_leveling",
     title: "Solo Leveling",
-    cover: "sololiveling.jpeg",
+    cover: "/sololiveling.jpeg",
     rating: 4.9,
     genres: ["Fantasy", "Action", "Manhwa"],
     chapters: 179,
@@ -116,7 +116,7 @@ const MOCK_MANGA = [
   {
     id: "spy_family",
     title: "Spy x Family",
-    cover: "spy.jpeg",
+    cover: "/spy.jpeg",
     rating: 4.4,
     genres: ["Comedy", "Slice of Life"],
     chapters: 95,
@@ -127,7 +127,7 @@ const MOCK_MANGA = [
   {
     id: "haikyuu",
     title: "Haikyuu!!",
-    cover: "haikuu.jpeg",
+    cover: "/haikuu.jpeg",
     rating: 4.8,
     genres: ["Sports", "Shonen"],
     chapters: 402,
@@ -138,7 +138,7 @@ const MOCK_MANGA = [
   {
     id: "madeinabyss",
     title: "Made in Abyss",
-    cover: "mia.jpeg",
+    cover: "/mia.jpeg",
     rating: 4.6,
     genres: ["Adventure", "Dark", "Fantasy"],
     chapters: 65,

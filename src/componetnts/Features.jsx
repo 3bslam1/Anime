@@ -72,13 +72,11 @@ export default function Features() {
             <div className="rounded-2xl overflow-hidden shadow-2xl
                             bg-linear-to-tr from-blue-950 via-indigo-950 to-violet-900 p-6 ring-1 ring-violet-800/30">
               <div className="relative w-full h-64 rounded-lg overflow-hidden">
-                <video
-                  src="/hero-bg.mp4"
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  loop
-                  muted
-                />
+              <video
+  src="/vecteezy_ai-generated-beautiful-illustration-background-of-anime_38777154.mp4"
+  className="w-full h-full object-cover"
+  autoPlay muted loop playsInline
+/>
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent mix-blend-multiply" />
               </div>
 

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <img
-              src="/public/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
+              src="/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
               alt="AnimeSite"
               className="w-10 h-10 drop-shadow-[0_0_12px_rgba(99,102,241,0.45)]"
             />

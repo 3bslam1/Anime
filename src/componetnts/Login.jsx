@@ -28,7 +28,7 @@ export default function Login() {
           <div className="flex flex-col items-center gap-3 mb-6">
             <a href="#home" className="inline-block" title="Back to Home">
               <img
-                src="/public/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
+                src="/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
                 alt="Logo"
                 className="w-16 h-16 md:w-20 md:h-20 opacity-90"
               />

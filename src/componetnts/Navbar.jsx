@@ -15,13 +15,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           
-          {/* Logo + Title */}
+         
           <Link
-            to="/"   // ← دى الصفحة الأساسية (Features / Home)
+            to="/"  
             className="flex items-center space-x-2 cursor-pointer select-none"
           >
             <img
-              src="/public/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
+              src="/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
               alt="AnimeSite logo"
               className="w-14 h-14 md:w-16 md:h-16 drop-shadow-[0_0_10px_rgba(79,70,229,0.5)]"
             />
@@ -31,7 +31,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Links (desktop) */}
+          
           <div className="hidden md:flex items-center space-x-8">
             
             <a
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           </div>
 
-          {/* Mobile Menu Button */}
+         
           <button
             type="button"
             aria-label={mobileMenuIsOpen ? "Close menu" : "Open menu"}
@@ -76,7 +76,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu (small screen) */}
+      
       {mobileMenuIsOpen && (
         <div className="md:hidden bg-linear-to-b from-indigo-950/95 via-blue-950/95 to-violet-950/95 border-t border-indigo-800/30 shadow-lg backdrop-blur-lg animate-fade-in-down">
           <div className="px-4 pt-4 pb-6 space-y-3">

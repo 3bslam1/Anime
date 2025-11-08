@@ -8,7 +8,7 @@ export default function Signup() {
   return (
     <main className="min-h-screen pt-24 bg-linear-to-b from-[#0b0d1e] via-[#111432] to-[#1a1941]/85 text-indigo-100 flex flex-col justify-between">
       
-      {/* زخارف الخلفية */}
+     
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 opacity-30"
@@ -18,16 +18,16 @@ export default function Signup() {
         }}
       />
 
-      {/* محتوى الصفحة */}
+      
       <section className="relative w-full max-w-md mx-auto flex-1 flex items-center px-4">
         <div className="rounded-2xl border border-indigo-800/40 shadow-[0_20px_60px_rgba(79,70,229,0.25)]
                         bg-linear-to-b from-[#0b0d1e] via-[#111432] to-[#1a1941]/85
                         backdrop-blur-md p-6 sm:p-8 w-full">
           
-          {/* لوجو + عنوان */}
+         
           <div className="flex flex-col items-center gap-3 mb-6">
             <img
-              src="/public/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
+              src="/8393dee6-7cdb-45d7-a72f-a14e56cff39e.png"
               alt="Logo"
               className="w-16 h-16 md:w-20 md:h-20 drop-shadow-[0_0_18px_rgba(99,102,241,0.5)]"
             />
@@ -35,7 +35,7 @@ export default function Signup() {
             <p className="text-sm text-indigo-300/90">Join and start your watchlist</p>
           </div>
 
-          {/* الفورم */}
+          
           <form className="space-y-4">
             
             <div className="space-y-2">
@@ -110,7 +110,7 @@ export default function Signup() {
               </div>
             </div>
 
-            {/* الشروط */}
+         
             <label className="flex items-start gap-3 text-sm">
               <input
                 type="checkbox"
@@ -122,7 +122,7 @@ export default function Signup() {
               </span>
             </label>
 
-            {/* زر التسجيل */}
+            
             <button
               type="submit"
               className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold
@@ -134,7 +134,7 @@ export default function Signup() {
               Create account
             </button>
 
-            {/* رابط تسجيل الدخول */}
+          
             <p className="text-center text-sm text-indigo-300/90">
               Already have an account?{" "}
               <a href="/login" className="text-indigo-200 hover:text-indigo-100 font-semibold inline-flex items-center gap-1">
@@ -145,7 +145,7 @@ export default function Signup() {
         </div>
       </section>
 
-      {/* ✅ FOOTER تمت إضافته هنا */}
+     
       <div className="border-t border-indigo-800/30 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-xs text-indigo-300 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span>© {new Date().getFullYear()} AnimeSite. 3bslam, All rights reserved.</span>
