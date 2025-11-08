@@ -14,10 +14,10 @@ export default function Features() {
     <main className="relative pt-24 min-h-screen text-indigo-100 overflow-hidden
                      bg-linear-to-b from-indigo-950 via-blue-950 to-violet-950">
 
-      {/* خلفية ديناميكية */}
+      
       <div aria-hidden className="animated-bg pointer-events-none" />
 
-      {/* HERO */}
+      
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center rounded-2xl p-6
@@ -51,7 +51,7 @@ export default function Features() {
               </a>
             </div>
 
-            {/* Stats */}
+        
             <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
                 { k: "Titles", v: "12,345+" },
@@ -67,13 +67,13 @@ export default function Features() {
             </dl>
           </div>
 
-          {/* Illustration / Card */}
+         
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl
                             bg-linear-to-tr from-blue-950 via-indigo-950 to-violet-900 p-6 ring-1 ring-violet-800/30">
               <div className="relative w-full h-64 rounded-lg overflow-hidden">
                 <video
-                  src="vecteezy_ai-generated-beautiful-illustration-background-of-anime_38777154.mp4"
+                  src="/hero-bg.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   loop
@@ -100,10 +100,10 @@ export default function Features() {
         </div>
       </section>
 
-      {/* FEATURES GRID */}
+
       <section className="relative mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Left column */}
+          
           <div className="col-span-1 md:col-span-1">
             <div className="rounded-2xl p-6 shadow-xl bg-linear-to-br from-indigo-950 to-blue-950 ring-1 ring-indigo-900/50 backdrop-blur-sm">
               <h2 className="text-lg font-bold text-indigo-100">Key Features</h2>
@@ -131,7 +131,7 @@ export default function Features() {
             </div>
           </div>
 
-          {/* Cards */}
+       
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature) => (
               <article
@@ -160,7 +160,7 @@ export default function Features() {
         </div>
       </section>
 
-      {/* CTA */}
+   
       <section
         className="relative mt-12 py-10 border-t border-indigo-900/40"
         style={{ background: "linear-gradient(90deg, rgba(7,12,24,0.75), rgba(35,8,56,0.7))" }}
@@ -184,7 +184,7 @@ export default function Features() {
 
       
 
-      {/* ===== CSS مدمج: الخلفية + أنيميشن الأزرار ===== */}
+      
       <style>{`
         /* دعم bg-linear-to-* اللي بتحبه */
         .bg-linear-to-b{ background-image:linear-gradient(to bottom,var(--tw-grad-from),var(--tw-grad-via),var(--tw-grad-to)); }
