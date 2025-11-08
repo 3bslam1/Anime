@@ -78,26 +78,41 @@ export default function Navbar() {
 
       
       {mobileMenuIsOpen && (
-        <div className="md:hidden bg-linear-to-b from-indigo-950/95 via-blue-950/95 to-violet-950/95 border-t border-indigo-800/30 shadow-lg backdrop-blur-lg animate-fade-in-down">
-          <div className="px-4 pt-4 pb-6 space-y-3">
-         
-            <a
-              href="Manga"
-              onClick={() => setMobileIsOpen(false)}
-              className="block text-indigo-100 hover:text-blue-300 transition"
-            >
-              Manga
-            </a>
-            <a
-              href="Watch"
-              onClick={() => setMobileIsOpen(false)}
-              className="block text-indigo-100 hover:text-blue-300 transition"
-            >
-              Watch
-            </a>
-          </div>
-        </div>
-      )}
+  <div className="md:hidden bg-linear-to-b from-indigo-950/95 via-blue-950/95 to-violet-950/95 border-t border-indigo-800/30 shadow-lg backdrop-blur-lg animate-fade-in-down">
+    <div className="px-4 pt-4 pb-6 space-y-3">
+      <Link
+        to="/Manga"
+        onClick={() => setMobileIsOpen(false)}
+        className="block text-indigo-100 hover:text-blue-300 transition"
+      >
+        Manga
+      </Link>
+      <Link
+        to="/Watch"
+        onClick={() => setMobileIsOpen(false)}
+        className="block text-indigo-100 hover:text-blue-300 transition"
+      >
+        Watch
+      </Link>
+      <Link
+        to="/Pricing"
+        onClick={() => setMobileIsOpen(false)}
+        className="block text-indigo-100 hover:text-blue-300 transition"
+      >
+        Subscriptions
+      </Link>
+      <Link
+        to="/login"
+        onClick={() => setMobileIsOpen(false)}
+        className="inline-flex items-center justify-center px-5 py-3 rounded-lg shadow-lg text-sm font-semibold
+                   bg-linear-to-r from-indigo-500 to-blue-600 text-white transform-gpu hover:scale-[1.02] transition"
+      >
+        Login
+      </Link>
+    </div>
+  </div>
+)}
+
     </nav>
   );
 }

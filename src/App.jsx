@@ -34,7 +34,7 @@ function App() {
         <Route path="/Manga" element={<Manga />} />
         <Route path="/Watch" element={<Watch />} />
         <Route path="/pricing" element={<Pricing />} />
-
+        
       </Routes>
     </div>
   );
