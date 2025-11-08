@@ -15,7 +15,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* صفحة الرئيسية */}
+     
         <Route
           path="/"
           element={
@@ -28,7 +28,6 @@ function App() {
           }
         />
 
-        {/* صفحة Login */}
         
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
