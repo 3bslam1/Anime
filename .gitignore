@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 public/*.mp4
+
+# large media
+public/**/*.mp4
+public/*.mp4
+*.mp4
