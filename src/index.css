@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+
+
+/* خرائط لأسماءك المخصصة bg-linear-to-* */
+.backdrop-glass { backdrop-filter: blur(8px); }
+.card-glass {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(120,70,200,0.18);
+  backdrop-filter: blur(8px);
+}
+.btn-sheen { position: relative; overflow: hidden; }
+.btn-sheen::after{
+  content:""; position:absolute; inset:0; transform:translateX(-120%);
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: transform .8s;
+}
+.btn-sheen:hover::after{ transform: translateX(120%); }
+.shadow-neon { box-shadow: 0 10px 30px rgba(37,99,235,.35); }
+.neon-ring { box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 0 40px rgba(79,70,229,.25) inset; }
+
+/* ==== Mesh grid background ==== */
+.mesh-grid{
+  background-image:
+    radial-gradient(rgba(99,102,241,0.07) 1px, transparent 1px),
+    radial-gradient(rgba(79,70,229,0.08) 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+}
+
+/* ==== Animated Gradient Panel ==== */
+.animated-gradient{
+  background: radial-gradient(1200px 600px at 10% 20%, rgba(99,102,241,.25), transparent 60%),
+              radial-gradient(1000px 600px at 90% 80%, rgba(37,99,235,.25), transparent 60%),
+              linear-gradient(135deg, rgba(2,6,23,.9), rgba(5,10,35,.9));
+  animation: ag-move 12s ease-in-out infinite alternate;
+}
+@keyframes ag-move{
+  0%{ transform: translate3d(0,0,0) scale(1); }
+  100%{ transform: translate3d(0,-10px,0) scale(1.02); }
+}
+
+/* ==== Floating chips ==== */
+.float-slow{ animation: float 6s ease-in-out infinite; }
+.float-fast{ animation: float 4.5s ease-in-out infinite; }
+@keyframes float{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-6px); }
+}
+
+/* ==== Pulses ==== */
+.glow-pulse{ animation: glow 7s ease-in-out infinite; }
+.glow-pulse-delayed{ animation: glow 9s ease-in-out infinite; }
+@keyframes glow{
+  0%,100%{ filter: blur(72px) brightness(1); }
+  50%{ filter: blur(84px) brightness(1.15); }
+}
+
+/* ==== Particles ==== */
+.particles{
+  position: absolute; inset:0; pointer-events:none;
+}
+.particles li{
+  --i: 1;
+  position:absolute; width:2px; height:2px; border-radius:50%;
+  background: rgba(173, 216, 255, .75);
+  box-shadow: 0 0 12px rgba(99,102,241,.65);
+  top: calc(5% * var(--i)); left: calc(4% * var(--i));
+  animation: drift calc(6s + (0.3s * var(--i))) linear infinite;
+}
+@keyframes drift{
+  0%{ transform: translateY(0) translateX(0); opacity:.8; }
+  50%{ transform: translateY(-14px) translateX(6px); opacity:1; }
+  100%{ transform: translateY(0) translateX(0); opacity:.8; }
+}
