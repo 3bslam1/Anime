@@ -34,31 +34,31 @@ export default function Navbar() {
           
           <div className="hidden md:flex items-center space-x-8">
             
-            <link
+            <Link
               to="/Manga"
               className="text-indigo-100 hover:text-blue-300 transition-colors duration-300 text-sm lg:text-base"
             >
               Manga
-            </link>
-            <link
+            </Link>
+            <Link
               to="/Watch"
               className="text-indigo-100 hover:text-blue-300 transition-colors duration-300 text-sm lg:text-base"
             >
               Watch
-            </link>
-            <link
+            </Link>
+            <Link
               to="/Pricing"
               className="text-indigo-100 hover:text-blue-300 transition-colors duration-300 text-sm lg:text-base"
             >
               Subscriptions
-            </link>
-            <link
+            </Link>
+            <Link
   to="/login"
   className="inline-flex items-center justify-center px-5 py-3 rounded-lg shadow-lg text-sm font-semibold
              bg-linear-to-r from-indigo-500 to-blue-600 text-white transform-gpu hover:scale-[1.02] transition"
 >
   Login
-</link>
+</Link>
 
 
           </div>

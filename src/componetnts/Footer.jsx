@@ -48,20 +48,20 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-indigo-100 mb-3">Explore</h4>
           <ul className="space-y-2 text-sm">
-            <li><link to="#home" className="hover:text-indigo-100">Home</link></li>
-            <li><link to="#features" className="hover:text-indigo-100">Features</link></li>
-            <li><link to="Manga" className="hover:text-indigo-100">Manga</link></li>
-            <li><link to="Watch" className="hover:text-indigo-100">Watch</link></li>
+            <li><Link to="#home" className="hover:text-indigo-100">Home</Link></li>
+            <li><Link to="#features" className="hover:text-indigo-100">Features</Link></li>
+            <li><Link to="Manga" className="hover:text-indigo-100">Manga</Link></li>
+            <li><Link to="Watch" className="hover:text-indigo-100">Watch</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-sm font-semibold text-indigo-100 mb-3">Account</h4>
           <ul className="space-y-2 text-sm">
-            <li><link to="login" className="hover:text-indigo-100">Login</link></li>
-            <li><link to="signup" className="hover:text-indigo-100">Sign Up</link></li>
-            <li><link to="#reset" className="hover:text-indigo-100">Reset Password</link></li>
-            <li><link to="#settings" className="hover:text-indigo-100">Settings</link></li>
+            <li><Link to="login" className="hover:text-indigo-100">Login</Link></li>
+            <li><Link to="signup" className="hover:text-indigo-100">Sign Up</Link></li>
+            <li><Link to="#reset" className="hover:text-indigo-100">Reset Password</Link></li>
+            <li><Link to="#settings" className="hover:text-indigo-100">Settings</Link></li>
           </ul>
         </div>
 
