@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff, UserPlus, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [showPass, setShowPass] = useState(false);

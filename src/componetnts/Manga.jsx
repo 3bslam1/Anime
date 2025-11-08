@@ -1,6 +1,7 @@
 // components/Manga.jsx
 import { useMemo, useState } from "react";
 import { Search, Star, BookmarkPlus, X, Filter, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const MOCK_MANGA = [
   {

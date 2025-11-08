@@ -1,5 +1,6 @@
 import React from "react";
 import { Star, Play, BookOpen, ShieldCheck, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Features() {
   const features = [

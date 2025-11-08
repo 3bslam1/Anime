@@ -1,6 +1,7 @@
 // components/Watch.jsx
 import { useMemo, useState } from "react";
 import { Search, Star, BookmarkPlus, X, Filter, ChevronDown, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const MOCK_SHOWS = [
   { id: "aot", title: "Attack on Titan", cover: "/aot.jpeg", rating: 4.8, genres: ["Action","Dark","Seinen"], seasons: 4, episodes: 87, updated: "1d",  progressEp: 34, desc: "Humanity fights for survival against towering titans and hidden conspiracies." },
