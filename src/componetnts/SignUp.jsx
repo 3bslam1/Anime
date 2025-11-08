@@ -137,9 +137,9 @@ export default function Signup() {
           
             <p className="text-center text-sm text-indigo-300/90">
               Already have an account?{" "}
-              <a href="/login" className="text-indigo-200 hover:text-indigo-100 font-semibold inline-flex items-center gap-1">
+              <link to="/login" className="text-indigo-200 hover:text-indigo-100 font-semibold inline-flex items-center gap-1">
                 <CheckCircle2 className="w-4 h-4" /> Sign in
-              </a>
+              </link>
             </p>
           </form>
         </div>

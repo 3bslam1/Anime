@@ -170,9 +170,9 @@ export default function Features() {
           </div>
 
           <div className="flex items-center space-x-3">
-            <a href="/signup" className="btn-glow">
+            <link to="/signup" className="btn-glow">
               Sign up
-            </a>
+            </link>
             <a href="#demo" className="btn-ghost">
               See demo
             </a>

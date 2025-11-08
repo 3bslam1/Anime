@@ -96,9 +96,9 @@ export default function Login() {
 
             <p className="text-center text-sm text-indigo-300/90 pt-1">
               New here?{" "}
-              <a href="/signup" className="text-indigo-200 hover:text-indigo-100 font-semibold">
+              <link to="/signup" className="text-indigo-200 hover:text-indigo-100 font-semibold">
                 Create an account
-              </a>
+              </link>
             </p>
           </form>
         </div>
