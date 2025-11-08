@@ -1,59 +1,61 @@
-import React from "react";
-import { Star, Play, BookOpen, ShieldCheck, Search } from "lucide-react";
+import React, { useMemo } from "react";
+import { Star, Play, BookOpen, ShieldCheck, Search, Flame, BookmarkPlus, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Features() {
-  const features = [
-    { id: 1, title: "Curated Categories", desc: "Discover hand-picked anime & manga categories tailored to your tastes.", icon: <Star className="w-6 h-6" /> },
-    { id: 2, title: "Read & Watch", desc: "Stream episodes or read chapters — synced progress across devices.", icon: <Play className="w-6 h-6" /> },
-    { id: 3, title: "Huge Library", desc: "Thousands of titles with summaries, ratings, and user lists.", icon: <BookOpen className="w-6 h-6" /> },
-    { id: 4, title: "Safe & Private", desc: "Privacy-first defaults and parental controls for peace of mind.", icon: <ShieldCheck className="w-6 h-6" /> },
-    { id: 5, title: "Smart Search", desc: "Find titles fast with fuzzy search, filters, and recommendations.", icon: <Search className="w-6 h-6" /> },
-  ];
+  const features = useMemo(
+    () => [
+      { id: 1, title: "Curated Categories", desc: "Discover hand-picked anime & manga categories tailored to your tastes.", icon: <Star className="w-6 h-6" /> },
+      { id: 2, title: "Read & Watch", desc: "Stream episodes or read chapters — synced progress across devices.", icon: <Play className="w-6 h-6" /> },
+      { id: 3, title: "Huge Library", desc: "Thousands of titles with summaries, ratings, and user lists.", icon: <BookOpen className="w-6 h-6" /> },
+      { id: 4, title: "Safe & Private", desc: "Privacy-first defaults and parental controls for peace of mind.", icon: <ShieldCheck className="w-6 h-6" /> },
+      { id: 5, title: "Smart Search", desc: "Find titles fast with fuzzy search, filters, and recommendations.", icon: <Search className="w-6 h-6" /> },
+    ],
+    []
+  );
+
+  const trending = useMemo(
+    () => [
+      { id: "one",    title: "Shadows of Eden",   tag: "New Season",   rating: "4.8",  eps: 12 },
+      { id: "two",    title: "Blade Symphony",    tag: "Trending",     rating: "4.6",  eps: 24 },
+      { id: "three",  title: "Neon Drift",        tag: "Top Rated",    rating: "4.9",  eps: 10 },
+      { id: "four",   title: "Azure Chronicle",   tag: "Fantasy",      rating: "4.7",  eps: 16 },
+      { id: "five",   title: "Crimson Requiem",   tag: "Action",       rating: "4.5",  eps: 20 },
+      { id: "six",    title: "Clockwork Garden",  tag: "Adventure",    rating: "4.6",  eps: 18 },
+    ],
+    []
+  );
 
   return (
-    <main className="relative pt-24 min-h-screen text-indigo-100 overflow-hidden
-                     bg-linear-to-b from-indigo-950 via-blue-950 to-violet-950">
+    <main className="relative pt-24 min-h-screen text-indigo-100 overflow-hidden bg-linear-to-b from-indigo-950 via-blue-950 to-violet-950">
 
-      
+      {/* خلفية متحركة عامة */}
       <div aria-hidden className="animated-bg pointer-events-none" />
 
-      
+      {/* هيرو: نص على الشمال / أشكال ديناميكية على اليمين */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center rounded-2xl p-6
-                     bg-linear-to-br from-blue-950/80 via-indigo-950/80 to-violet-950/80
-                     shadow-[0_18px_60px_rgba(79,70,229,0.25)] ring-1 ring-indigo-900/40 backdrop-blur-md"
-        >
-          <div className="space-y-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium
-                             bg-indigo-900/60 text-indigo-200 backdrop-blur-sm ring-1 ring-indigo-800/40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch rounded-2xl p-6 bg-linear-to-br from-blue-950/70 via-indigo-950/70 to-violet-950/70 shadow-[0_18px_60px_rgba(79,70,229,0.25)] ring-1 ring-indigo-900/40 backdrop-blur-md">
+
+          {/* النص */}
+          <div className="flex flex-col justify-center space-y-6">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-900/60 text-indigo-200 backdrop-blur-sm ring-1 ring-indigo-800/40 w-fit">
               <strong className="mr-1 text-indigo-200">Anime</strong>Site Features
             </span>
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-50 drop-shadow">
+            <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-indigo-50 drop-shadow">
               Everything you need to explore, read, and watch anime & manga
             </h1>
 
-            <p className="text-indigo-300/90 max-w-xl">
-              From curated lists to synced progress, our platform helps fans find the next series they'll love — fast.
+            <p className="text-indigo-300/90 text-base sm:text-lg max-w-xl">
+              From curated lists to synced progress, our platform helps fans find the next series they’ll love — fast.
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0 mt-4">
-              <a href="#get-started" className="btn-glow">
-                Get started
-              </a>
-
-              <a
-                href="#watch-sample"
-                className="btn-ghost"
-              >
-                Watch sample
-              </a>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-2">
+              <Link to="/signup" className="btn-glow">Get started</Link>
+              <a href="#trending" className="btn-ghost">Explore trending</a>
             </div>
 
-        
-            <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
                 { k: "Titles", v: "12,345+" },
                 { k: "Active Users", v: "230k" },
@@ -62,57 +64,69 @@ export default function Features() {
               ].map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <dt className="text-xs text-indigo-300/80">{s.k}</dt>
-                  <dd className="text-lg font-semibold text-indigo-50">{s.v}</dd>
+                  <dd className="text-2xl font-semibold text-indigo-50">{s.v}</dd>
                 </div>
               ))}
             </dl>
           </div>
 
-         
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl
-                            bg-linear-to-tr from-blue-950 via-indigo-950 to-violet-900 p-6 ring-1 ring-violet-800/30">
-              <div className="relative w-full h-64 rounded-lg overflow-hidden">
-              <video
-  src="/vecteezy_ai-generated-beautiful-illustration-background-of-anime_38777154.mp4"
-  className="w-full h-full object-cover"
-  autoPlay muted loop playsInline
-/>
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent mix-blend-multiply" />
+          {/* أشكال ديناميكية بدل الصور/الفيديو – مفيش فراغ */}
+          <div className="relative rounded-2xl ring-1 ring-violet-800/30 overflow-hidden bg-[#0c0f21]/60 p-0">
+
+            {/* شبكة خطوط */}
+            <div className="absolute inset-0 opacity-[0.10]">
+              <div className="grid-lines w-full h-full" />
+            </div>
+
+            {/* Blobs متحركة */}
+            <div className="absolute -top-24 -left-10 blob blob-indigo" />
+            <div className="absolute -bottom-16 -right-16 blob blob-violet delay-200" />
+            <div className="absolute top-1/3 -right-10 blob blob-blue delay-100" />
+
+            {/* محتوى تعبئة – Copy جذاب + نقاط */}
+            <div className="relative z-10 px-6 sm:px-8 py-8 sm:py-10">
+              <div className="inline-flex items-center gap-2 text-indigo-200/90 mb-4">
+                <Sparkles className="w-5 h-5" />
+                <span className="text-sm uppercase tracking-wider">Why fans love us</span>
               </div>
 
-              <div
-                className="mt-4 p-4 rounded-lg shadow-lg -translate-y-6 backdrop-blur-sm ring-1 ring-violet-800/40"
-                style={{ background: "linear-gradient(90deg, rgba(13,13,23,0.55), rgba(53,16,96,0.45))" }}
-              >
-                <h3 className="text-base font-semibold text-indigo-100">New Season Highlights</h3>
-                <p className="text-sm text-indigo-200/90">
-                  Discover top anime picks updated weekly with trailers and reading lists.
-                </p>
-                <div className="mt-3 flex items-center space-x-2">
-                  <button className="btn-glow btn-sm">Explore</button>
-                  <button className="btn-ghost btn-sm">Save</button>
-                </div>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+                Fast. Sleek. Privacy-first.
+              </h3>
+
+              <p className="text-indigo-200/90 leading-relaxed max-w-xl">
+                Lightning-quick browsing with a clean, immersive UI. Zero clutter, smart caching, and seamless syncing across devices.
+                Your lists, watch history, and preferences are always with you — and always private.
+              </p>
+
+              <ul className="mt-6 space-y-3 text-indigo-100/95">
+                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-indigo-300" /> Custom collections & smart filters</li>
+                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-indigo-300" /> Trailer hubs, episode reminders, progress sync</li>
+                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-indigo-300" /> Family profiles & parental controls</li>
+              </ul>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a href="#learn-more" className="btn-ghost btn-sm">Learn more</a>
+                <a href="#demo" className="btn-ghost btn-sm">See demo</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
+      {/* Key Features (ثابت) */}
       <section className="relative mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div className="col-span-1 md:col-span-1">
+          <div className="col-span-1">
             <div className="rounded-2xl p-6 shadow-xl bg-linear-to-br from-indigo-950 to-blue-950 ring-1 ring-indigo-900/50 backdrop-blur-sm">
-              <h2 className="text-lg font-bold text-indigo-100">Key Features</h2>
+              <h2 className="text-xl font-bold text-indigo-100">Key Features</h2>
               <p className="mt-2 text-sm text-indigo-300/90">
                 Everything built to keep fans coming back — lightweight UI, powerful filters, and synced watchlists.
               </p>
 
               <ul className="mt-4 space-y-3">
                 {features.slice(0, 3).map((f) => (
-                  <li key={f.id} className="flex items-start space-x-3">
+                  <li key={f.id} className="flex items-start gap-3">
                     <div className="rounded-md p-2 text-indigo-200 bg-linear-to-br from-indigo-800/70 to-blue-800/70 ring-1 ring-indigo-900/40">
                       {f.icon}
                     </div>
@@ -130,27 +144,26 @@ export default function Features() {
             </div>
           </div>
 
-       
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature) => (
               <article
                 key={feature.id}
-                className="rounded-lg p-5 shadow-lg transition-transform transform hover:-translate-y-1 ring-1 ring-violet-800/20"
+                className="rounded-lg p-5 shadow-lg transition-transform hover:-translate-y-1 ring-1 ring-violet-800/20"
                 style={{ background: "linear-gradient(180deg, rgba(10,16,30,0.65), rgba(40,12,60,0.6))" }}
                 aria-labelledby={`feature-${feature.id}`}
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start gap-4">
                   <div
                     className="rounded-lg p-3 flex items-center justify-center text-indigo-200"
-                    style={{ background: "linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.08))" }}
+                    style={{ background: "linear-gradient(135deg, rgba(79,70,229,0.10), rgba(99,102,241,0.10))" }}
                   >
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 id={`feature-${feature.id}`} className="text-sm font-semibold text-indigo-100">
+                    <h3 id={`feature-${feature.id}`} className="text-base font-semibold text-indigo-100">
                       {feature.title}
                     </h3>
-                    <p className="mt-1 text-xs text-indigo-300/85">{feature.desc}</p>
+                    <p className="mt-1 text-sm text-indigo-300/85">{feature.desc}</p>
                   </div>
                 </div>
               </article>
@@ -159,102 +172,171 @@ export default function Features() {
         </div>
       </section>
 
-   
-      <section
-        className="relative mt-12 py-10 border-t border-indigo-900/40"
-        style={{ background: "linear-gradient(90deg, rgba(7,12,24,0.75), rgba(35,8,56,0.7))" }}
-      >
+      {/* TRENDING NOW — مكبّر ومليان محتوى بدون فراغ */}
+      <section id="trending" className="relative mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-end justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <Flame className="w-6 h-6 text-orange-300" />
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Trending Now</h2>
+          </div>
+          <a href="#all-trending" className="text-sm text-indigo-300 hover:text-indigo-100">View all</a>
+        </div>
+
+        {/* Grid كبير: كارت هيرو واسع + كروت كبيرة تملأ المساحة */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Hero Card (يملى مساحة) */}
+          <article className="lg:col-span-2 rounded-2xl overflow-hidden ring-1 ring-violet-800/30 shadow-2xl bg-linear-to-br from-[#131736] via-[#161a3d] to-[#1b1a45] relative">
+            {/* خلفية ديكورية */}
+            <div className="absolute -top-20 -left-20 blob blob-indigo opacity-70 scale-75" />
+            <div className="absolute -bottom-24 -right-24 blob blob-violet opacity-60 scale-75" />
+
+            <div className="relative z-10 p-6 sm:p-8">
+              <div className="flex items-center gap-2 text-xs text-indigo-200/80 uppercase tracking-wider mb-2">
+                <span className="px-2 py-0.5 rounded bg-indigo-800/40 ring-1 ring-indigo-700/40">Editor’s Pick</span>
+                <span className="px-2 py-0.5 rounded bg-fuchsia-800/30 ring-1 ring-fuchsia-700/40">Weekly Hot</span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-extrabold mb-2">Neon Drift</h3>
+              <p className="text-indigo-200/90 max-w-2xl">
+                A high-octane cyber-noir about street racers hacking the city grid. Stunning neon palettes, bold choreography,
+                and a synth-heavy score make this a must-watch.
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <button className="btn-glow btn-sm">Watch trailer</button>
+                <button className="btn-ghost btn-sm"><BookmarkPlus className="w-4 h-4 mr-1" /> Add to list</button>
+                <span className="text-sm text-indigo-300/90">Rating: <strong className="text-indigo-100">4.9</strong> • Episodes: 10</span>
+              </div>
+            </div>
+          </article>
+
+          {/* كارت جانبي كبير لملء الارتفاع */}
+          <article className="rounded-2xl p-6 ring-1 ring-indigo-900/40 shadow-xl bg-linear-to-br from-indigo-950/80 via-blue-950/70 to-violet-950/70 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-bold mb-1">Blade Symphony</h3>
+              <p className="text-sm text-indigo-300/90">A rival-schools saga where duels decide territories. Crisp fight direction and sharp drama.</p>
+            </div>
+            <div className="mt-4 flex items-center justify-between">
+              <span className="text-sm text-indigo-300/90">Rating: <strong className="text-indigo-100">4.6</strong></span>
+              <button className="btn-ghost btn-sm">Details</button>
+            </div>
+          </article>
+        </div>
+
+        {/* باقي التريندينج — كروت كبيرة ومضغوطة بين عمودين */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {trending.slice(1).map((t) => (
+            <article key={t.id} className="rounded-xl p-5 ring-1 ring-violet-800/25 bg-linear-to-br from-[#0e1228] via-[#121637] to-[#171649] shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-indigo-200/80 mb-2">
+                <span className="px-2 py-0.5 rounded bg-indigo-800/40 ring-1 ring-indigo-700/40">{t.tag}</span>
+              </div>
+              <h3 className="text-xl font-semibold">{t.title}</h3>
+              <p className="mt-1 text-sm text-indigo-300/90">
+                Tight pacing, bold art direction, and character arcs that actually pay off. Perfect binge material.
+              </p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="text-sm text-indigo-300/90">Rating: <strong className="text-indigo-100">{t.rating}</strong> • Eps: {t.eps}</span>
+                <button className="btn-ghost btn-sm">Open</button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative mt-16 py-10 border-t border-indigo-900/40" style={{ background: "linear-gradient(90deg, rgba(7,12,24,0.75), rgba(35,8,56,0.7))" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-bold text-indigo-100">Ready to dive in?</h3>
+            <h3 className="text-2xl font-bold text-indigo-100">Ready to dive in?</h3>
             <p className="text-sm text-indigo-300/90">Create an account and start building your watchlist in seconds.</p>
           </div>
 
-          <div className="flex items-center space-x-3">
-            <Link to="/signup" className="btn-glow">
-              Sign up
-            </Link>
-            <a href="#demo" className="btn-ghost">
-              See demo
-            </a>
+          <div className="flex items-center gap-3">
+            <Link to="/signup" className="btn-glow">Sign up</Link>
+            <a href="#demo" className="btn-ghost">See demo</a>
           </div>
         </div>
       </section>
 
-      
-
-      
+      {/* ستايلات مساعدة */}
       <style>{`
-        /* دعم bg-linear-to-* اللي بتحبه */
+        /* دعم bg-linear-to-* */
         .bg-linear-to-b{ background-image:linear-gradient(to bottom,var(--tw-grad-from),var(--tw-grad-via),var(--tw-grad-to)); }
         .bg-linear-to-br{ background-image:linear-gradient(to bottom right,var(--tw-grad-from),var(--tw-grad-via,transparent),var(--tw-grad-to)); }
-        .bg-linear-to-tr{ background-image:linear-gradient(to top right,var(--tw-grad-from),var(--tw-grad-via,transparent),var(--tw-grad-to)); }
 
-        /* الخلفية الديناميكية */
+        /* الخلفية الديناميكية العامة */
         .animated-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background:
-    radial-gradient(800px 600px at 20% 20%, rgba(79,70,229,0.40), transparent 60%),
-    radial-gradient(900px 600px at 80% 80%, rgba(37,99,235,0.40), transparent 60%),
-    radial-gradient(700px 500px at 50% 120%, rgba(139,92,246,0.35), transparent 60%);
-  animation: bg-flow 28s ease-in-out infinite alternate;
-  filter: blur(90px);
-}
+          position: fixed; inset: 0; z-index: 0;
+          background:
+            radial-gradient(800px 600px at 20% 20%, rgba(79,70,229,0.35), transparent 60%),
+            radial-gradient(900px 600px at 80% 80%, rgba(37,99,235,0.35), transparent 60%),
+            radial-gradient(700px 500px at 50% 120%, rgba(139,92,246,0.30), transparent 60%);
+          animation: bg-flow 26s ease-in-out infinite alternate;
+          filter: blur(90px);
+        }
+        @keyframes bg-flow {
+          0% { transform: translate3d(-3%, -2%, 0) scale(1); }
+          50% { transform: translate3d(3%, 2%, 0) scale(1.05); }
+          100% { transform: translate3d(0%, 0%, 0) scale(1.02); }
+        }
 
-/* الحركة */
-@keyframes bg-flow {
-  0%   { transform: translate3d(-3%, -2%, 0) scale(1); }
-  25%  { transform: translate3d(3%, -4%, 0) scale(1.05); }
-  50%  { transform: translate3d(2%, 2%, 0) scale(1.02); }
-  75%  { transform: translate3d(-2%, 3%, 0) scale(1.07); }
-  100% { transform: translate3d(0%, 0%, 0) scale(1.04); }
-}
+        /* خطوط الشبكة الديكورية */
+        .grid-lines {
+          background-image:
+            linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+          background-size: 36px 36px;
+          mask-image: radial-gradient(60% 60% at 50% 50%, black 60%, transparent 100%);
+        }
 
+        /* Blobs */
+        .blob{
+          width: 520px; height: 520px; border-radius: 50%;
+          filter: blur(40px);
+          animation: floaty 16s ease-in-out infinite;
+          opacity:.8;
+        }
+        .blob-indigo{ background: radial-gradient(50% 50% at 50% 50%, rgba(99,102,241,0.55), rgba(99,102,241,0.08)); }
+        .blob-violet{ background: radial-gradient(50% 50% at 50% 50%, rgba(139,92,246,0.45), rgba(139,92,246,0.06)); }
+        .blob-blue{ background: radial-gradient(50% 50% at 50% 50%, rgba(37,99,235,0.45), rgba(37,99,235,0.06)); }
+        .delay-100{ animation-delay: .8s; }
+        .delay-200{ animation-delay: 1.6s; }
 
-        /* زرار إضاءة من الشمال لليمين (Auto Sheen) */
+        @keyframes floaty {
+          0%   { transform: translate3d(0, 0, 0) scale(1); }
+          50%  { transform: translate3d(20px, -18px, 0) scale(1.06); }
+          100% { transform: translate3d(0, 0, 0) scale(1.02); }
+        }
+
+        /* أزرار */
         .btn-glow{
           position: relative;
           display:inline-flex; align-items:center; justify-content:center;
-          gap:.5rem; padding:.75rem 1.25rem; border-radius: .75rem;
-          font-weight:600; color:white;
+          gap:.5rem; padding:.85rem 1.35rem; border-radius: .9rem;
+          font-weight:700; color:white; letter-spacing:.2px;
           background: linear-gradient(90deg, #4f46e5, #2563eb);
           box-shadow: 0 10px 30px rgba(37,99,235,.35);
           transform: translateZ(0);
           overflow:hidden;
           transition: filter .25s, transform .2s;
         }
-        .btn-glow:hover{ filter: brightness(1.1); transform: translateY(-1px); }
+        .btn-glow:hover{ filter: brightness(1.1); transform: translateY(-2px); }
         .btn-glow::after{
-          content:"";
-          position:absolute; inset:-2px;
-          background:
-            linear-gradient(90deg, rgba(255,255,255,0) 0%,
-                                   rgba(255,255,255,0.35) 50%,
-                                   rgba(255,255,255,0) 100%);
-          transform: translateX(-150%);
-          animation: sheen 2.2s linear infinite;
-          mix-blend: screen; pointer-events:none;
+          content:""; position:absolute; inset:-2px;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0) 100%);
+          transform: translateX(-150%); animation: sheen 2.2s linear infinite; mix-blend: screen; pointer-events:none;
         }
-        @keyframes sheen{
-          0%{ transform: translateX(-150%); }
-          100%{ transform: translateX(150%); }
-        }
-        /* حجم أصغر للزر */
-        .btn-sm{ padding:.5rem .75rem; border-radius:.5rem; }
+        @keyframes sheen{ 0%{transform: translateX(-150%);} 100%{transform: translateX(150%);} }
+        .btn-sm{ padding:.55rem .85rem; border-radius:.65rem; font-weight:600; font-size:.9rem; }
 
-        /* زر زجاجي داكن */
         .btn-ghost{
           display:inline-flex; align-items:center; justify-content:center;
-          padding:.75rem 1.25rem; border-radius:.75rem; font-weight:500;
-          background: rgba(255,255,255,0.05);
-          color: #c7d2fe;
+          padding:.8rem 1.2rem; border-radius:.9rem; font-weight:600;
+          background: rgba(255,255,255,0.06); color: #dbe4ff;
           border: 1px solid rgba(99,102,241,0.35);
           backdrop-filter: blur(6px);
           transition: background .25s, transform .2s, border-color .25s;
         }
-        .btn-ghost:hover{ background: rgba(255,255,255,0.08); transform: translateY(-1px); border-color:rgba(99,102,241,0.6); }
+        .btn-ghost:hover{ background: rgba(255,255,255,0.10); transform: translateY(-2px); border-color:rgba(99,102,241,0.6); }
       `}</style>
     </main>
   );
